@@ -87,7 +87,7 @@ buttons = [
         InlineKeyboardButton(text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/gsidsupport"),
     ],
     [
-        InlineKeyboardButton(text="ᴄᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
+        InlineKeyboardButton(text="ᴄᴏᴍᴍᴀɴᴅs", callback_data="fallen_support"),
         InlineKeyboardButton(text="ᴅᴏɴᴀᴛᴇ", url=f"https://telegra.ph/Thank-you-for-donating-your-money-to-me-05-20"),
     ],
     [
