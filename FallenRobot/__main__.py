@@ -388,7 +388,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ᴍᴜꜱɪᴄ", callback_data="fallenmusic_"
+                            text="ᴍᴜꜱɪᴄ", callback_data="fallen_music"
                         ),
                         InlineKeyboardButton(
                             text="ᴍᴀɴᴀɢᴇ", callback_data="help_back"
@@ -400,7 +400,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                 ]
             ),
         )
-    elif query.data == "fallenmusic_": #testing
+    elif query.data == "fallen_music": #testing
         query.message.edit_text(
             text="*๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ʜᴇʟᴩ ᴀɴᴅ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴄᴏᴍᴍᴀɴᴅꜱ.*"
             f"\n\nɪғ ʏᴏᴜ ғᴏᴜɴᴅ ᴀɴʏ ʙᴜɢ ɪɴ {BOT_NAME} ᴏʀ ɪғ ʏᴏᴜ ᴡᴀɴɴᴀ ɢɪᴠᴇ ғᴇᴇᴅʙᴀᴄᴋ, ᴩʟᴇᴀsᴇ ʀᴇᴩᴏʀᴛ ɪᴛ ᴀᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ.",
@@ -409,18 +409,18 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="admins_"
+                            text="ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="admin_commands"
                         ),
                         InlineKeyboardButton(
-                            text="ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="bots_"
+                            text="ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="bot_commands"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴘʟᴀʏ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="plays_"
+                            text="ᴘʟᴀʏ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="play_commands"
                         ),
                         InlineKeyboardButton(
-                            text="ᴇxᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="extra_"
+                            text="ᴇxᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="extra_commands"
                         ),
                     ],
                     [
@@ -443,7 +443,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
 @run_async  #test1
 def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
-    if query.data == "admins_":
+    if query.data == "admin_commands":
         query.message.edit_text(
             text=f"""
 🤵 Admin Help Menu.
@@ -482,7 +482,7 @@ Auth users can use admin commands without admin rights in your group.
 @run_async #test2
 def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
-    if query.data == "plays_":
+    if query.data == "play_commands":
         query.message.edit_text(
             text=f"""
 🎵 Play Commands :
@@ -515,7 +515,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
 @run_async #test3
 def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
-    if query.data == "bots_":
+    if query.data == "bot_commands":
         query.message.edit_text(
             text=f"""
 🤖 Bot Commands:
@@ -542,7 +542,7 @@ c stands for channel play.
 @run_async # test4
 def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
-    if query.data == "extra_":
+    if query.data == "extra_commands":
         query.message.edit_text(
             text=f"""
 ✅Extra  Commands:
