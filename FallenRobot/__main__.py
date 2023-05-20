@@ -388,10 +388,10 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ᴍᴜꜱɪᴄ", callback_data="fallen_music"
+                            text="🎧 ᴍᴜꜱɪᴄ", callback_data="fallen_music"
                         ),
                         InlineKeyboardButton(
-                            text="ᴍᴀɴᴀɢᴇ", callback_data="help_back"
+                            text="🗂 ᴍᴀɴᴀɢᴇ", callback_data="help_back"
                         ),
                     ],
                     [
