@@ -84,7 +84,7 @@ PM_START_TEXT = """
 buttons = [
     [
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="fallen_"),
-        InlineKeyboardButton(text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/gsidsupport"),
+        InlineKeyboardButton(text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/+P_p-ZtJeq6EzNmY1"),
     ],
     [
         InlineKeyboardButton(text="ʜᴇʟᴩ", callback_data="fallen_support"),
