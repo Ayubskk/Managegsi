@@ -409,18 +409,18 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="admin_commands"
+                            text="ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="fallen_admin"
                         ),
                         InlineKeyboardButton(
-                            text="ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="bot_commands"
+                            text="ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="fallen_bot"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴘʟᴀʏ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="play_commands"
+                            text="ᴘʟᴀʏ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="fallen_play"
                         ),
                         InlineKeyboardButton(
-                            text="ᴇxᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="extra_commands"
+                            text="ᴇxᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="fallen_extra"
                         ),
                     ],
                     [
@@ -443,7 +443,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
 @run_async  #test1
 def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
-    if query.data == "admin_commands":
+    if query.data == "fallen_admin":
         query.message.edit_text(
             text=f"""
 🤵 Admin Help Menu.
@@ -476,13 +476,13 @@ Auth users can use admin commands without admin rights in your group.
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="◁", callback_data="fallen_")]]
+                [[InlineKeyboardButton(text="◁", callback_data="fallen_music")]]
             ),
         )
 @run_async #test2
 def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
-    if query.data == "play_commands":
+    if query.data == "fallen_play":
         query.message.edit_text(
             text=f"""
 🎵 Play Commands :
@@ -509,13 +509,13 @@ def Source_about_callback(update: Update, context: CallbackContext):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="◁", callback_data="fallen_")]]
+                [[InlineKeyboardButton(text="◁", callback_data="fallen_music")]]
             ),
         )
 @run_async #test3
 def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
-    if query.data == "bot_commands":
+    if query.data == "fallen_bot":
         query.message.edit_text(
             text=f"""
 🤖 Bot Commands:
@@ -536,13 +536,13 @@ c stands for channel play.
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="◁", callback_data="fallen_")]]
+                [[InlineKeyboardButton(text="◁", callback_data="fallen_music")]]
             ),
         )
 @run_async # test4
 def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
-    if query.data == "extra_commands":
+    if query.data == "fallen_extra":
         query.message.edit_text(
             text=f"""
 ✅Extra  Commands:
@@ -579,7 +579,7 @@ Options in playmode:
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="◁", callback_data="fallen_")]]
+                [[InlineKeyboardButton(text="◁", callback_data="fallen_music")]]
             ),
         )        
 @run_async
