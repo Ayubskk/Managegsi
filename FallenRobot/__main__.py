@@ -83,16 +83,16 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="fallen_"),
-        InlineKeyboardButton(text="sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/gsidsupport"),
+        InlineKeyboardButton(text="📚 ᴀʙᴏᴜᴛ", callback_data="fallen_"),
+        InlineKeyboardButton(text="🧑‍🔧 sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/gsidsupport"),
     ],
     [
-        InlineKeyboardButton(text="ʜᴇʟᴩ", callback_data="fallen_support"),
-        InlineKeyboardButton(text="ᴅᴏɴᴀᴛᴇ", url=f"https://telegra.ph/Thank-you-for-donating-your-money-to-me-05-20"),
+        InlineKeyboardButton(text="🕵🏻‍♂ ʜᴇʟᴩ", callback_data="fallen_support"),
+        InlineKeyboardButton(text="💰 ᴅᴏɴᴀᴛᴇ", url=f"https://telegra.ph/Thank-you-for-donating-your-money-to-me-05-20"),
     ],
     [
         InlineKeyboardButton(
-            text="ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ",
+            text="➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ",
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         ),
     ],
