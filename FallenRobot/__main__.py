@@ -409,18 +409,18 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="fallen_admin"
+                            text="👨‍✈️ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="fallen_admin"
                         ),
                         InlineKeyboardButton(
-                            text="ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="fallen_bot"
+                            text="🤖 ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="fallen_bot"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴘʟᴀʏ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="fallen_play"
+                            text="▶️ ᴘʟᴀʏ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="fallen_play"
                         ),
                         InlineKeyboardButton(
-                            text="ᴇxᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="fallen_extra"
+                            text="🗃 ᴇxᴛʀᴀ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="fallen_extra"
                         ),
                     ],
                     [
