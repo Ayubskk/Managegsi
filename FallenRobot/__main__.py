@@ -366,10 +366,10 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"t.me/archanistz"
+                            text="🐼 ᴅᴇᴠᴇʟᴏᴩᴇʀ", url=f"t.me/archanistz"
                         ),
                         InlineKeyboardButton(
-                            text="sᴏᴜʀᴄᴇ",
+                            text="🗂 sᴏᴜʀᴄᴇ",
                             callback_data="source_",
                         ),
                     ],
