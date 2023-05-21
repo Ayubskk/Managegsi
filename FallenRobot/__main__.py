@@ -512,18 +512,9 @@ Auth users can use admin commands without admin rights in your group.
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="◁", callback_data="music1_back")]]
+                [[InlineKeyboardButton(text="◁", callback_data="fallen_music")]]
             ),
-        )
-    elif query.data == "music1_back":
-        first_name = update.effective_user.first_name
-        query.message.edit_text(
-            PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
-            reply_markup=InlineKeyboardMarkup(buttons),
-            parse_mode=ParseMode.MARKDOWN,
-            timeout=60,
-            disable_web_page_preview=True,
-        )        
+        )   
         
         
 @run_async
@@ -563,18 +554,9 @@ Auth users can use admin commands without admin rights in your group.
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="◁", callback_data="music2_back")]]
+                [[InlineKeyboardButton(text="◁", callback_data="fallen_music")]]
             ),
-        )
-    elif query.data == "music2_back":
-        first_name = update.effective_user.first_name
-        query.message.edit_text(
-            PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
-            reply_markup=InlineKeyboardMarkup(buttons),
-            parse_mode=ParseMode.MARKDOWN,
-            timeout=60,
-            disable_web_page_preview=True,
-        )        
+        )   
       
         
 @run_async
