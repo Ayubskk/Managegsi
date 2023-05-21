@@ -428,31 +428,7 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                     ],
                 ]
             ),
-        )
-    elif query.data == "fallen_admin":
-        query.message.edit_text(
-            text="*๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ʜᴇʟᴩ ᴀɴᴅ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴄᴏᴍᴍᴀɴᴅꜱ.*"
-            f"\n\nɪғ ʏᴏᴜ ғᴏᴜɴᴅ ᴀɴʏ ʙᴜɢ ɪɴ ᴏʀ ɪғ ʏᴏᴜ ᴡᴀɴɴᴀ ɢɪᴠᴇ ғᴇᴇᴅʙᴀᴄᴋ, ᴩʟᴇᴀsᴇ ʀᴇᴩᴏʀᴛ ɪᴛ ᴀᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ.",
-            parse_mode=ParseMode.MARKDOWN,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text="◁", callback_data="fallen_music"
-                        ),
-                    ],    
-                ]
-            ),
         )        
-    elif query.data == "fallen_music_back":
-        first_name = update.effective_user.first_name
-        query.message.edit_text(
-            PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
-            reply_markup=InlineKeyboardMarkup(buttons),
-            parse_mode=ParseMode.MARKDOWN,
-            timeout=60,
-            disable_web_page_preview=True,
-        )
     elif query.data == "fallen_back":
         first_name = update.effective_user.first_name
         query.message.edit_text(
@@ -499,6 +475,41 @@ def Source_about_callback(update: Update, context: CallbackContext):
         )
 
 
+@run_async
+def Source_about_callback(update: Update, context: CallbackContext):
+    query = update.callback_query
+    if query.data == "source_music":
+        query.message.edit_text(
+            text=f"""
+*ʜᴇʏ,
+ ᴛʜɪs ɪs {BOT_NAME},
+ᴀɴ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ & ᴍᴜꜱɪᴄ ʙᴏᴛ.*
+
+ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ : [ᴛᴇʟᴇᴛʜᴏɴ](https://github.com/LonamiWebs/Telethon)
+[ᴩʏʀᴏɢʀᴀᴍ](https://github.com/pyrogram/pyrogram)
+[ᴩʏᴛʜᴏɴ-ᴛᴇʟᴇɢʀᴀᴍ-ʙᴏᴛ](https://github.com/python-telegram-bot/python-telegram-bot)
+ᴀɴᴅ ᴜsɪɴɢ [sǫʟᴀʟᴄʜᴇᴍʏ](https://www.sqlalchemy.org) ᴀɴᴅ [ᴍᴏɴɢᴏ](https://cloud.mongodb.com) ᴀs ᴅᴀᴛᴀʙᴀsᴇ.
+
+{BOT_NAME} ɪs ʟɪᴄᴇɴsᴇᴅ ᴜɴᴅᴇʀ ᴛʜᴇ ᴍɪᴛ ʟɪᴄᴇɴsᴇ.
+© 2022 - 2023 | [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ](https://t.me/{SUPPORT_CHAT}), ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ.
+""",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="◁", callback_data="fallen_music")]]
+            ),
+        )
+    elif query.data == "source_music":
+        first_name = update.effective_user.first_name
+        query.message.edit_text(
+            PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
+            reply_markup=InlineKeyboardMarkup(buttons),
+            parse_mode=ParseMode.MARKDOWN,
+            timeout=60,
+            disable_web_page_preview=True,
+        )
+#------------------------------------------------------------------------------------------------------------------------------        
+        
 @run_async
 def get_help(update: Update, context: CallbackContext):
     chat = update.effective_chat  # type: Optional[Chat]
