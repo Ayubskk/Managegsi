@@ -400,6 +400,108 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
                 ]
             ),
         )
+@run_async
+def Source_about_callback(update: Update, context: CallbackContext):
+    query = update.callback_query
+    if query.data == "music1_":
+        query.message.edit_text(
+            text=f"""
+🤵 Admin Help Menu.
+
+c stands for channel playback.
+➻ /pause or /cpause » Pause the music playing.
+➻ /resume or /cresume » Resume paused music.
+➻ /mmute or /cmute » Mute playing music.
+➻ /munmute or /cunmute » Turn on muted music.
+➻ /skip or /cskip » Skip music currently playing.
+➻ /end or /cend » Stop playing music.
+➻ /shuffle or /cshuffle » Randomly shuffle playlist.
+➻ /seek or /cseek » Continue to search for music according to your duration.
+➻ /queue or /cqueue » Check queue list.
+➻ /seekback or /cseekback » Back off look for music according to your duration.
+
+⏩ Skip music playback.
+➻ /skip or /cskip » To skip the queue song.
+➻ Skips music to the specified queue number. Example: /skip 3 will skip music to third queue music and will ignore music 1 and 2 in queue.
+
+🔁 Loop.
+➻ /loop or /cloop [ enable/disable ] or [ intermediate number 1-10 ]
+➻ When activated, the bot plays the currently playing music 1-10 times on voice chat...
+
+💂 Auth users
+Auth users can use admin commands without admin rights in your group.
+➻ /auth [ Username ] » Add the user to the AUTH LIST in your group.
+➻ /unauth [ Username ] » Remove the user from the AUTH LIST in your group.
+➻ /authusers » Check the AUTH LIST in your group.
+""",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="◁", callback_data="music1_back")]]
+            ),
+        )
+    elif query.data == "music1_back":
+        first_name = update.effective_user.first_name
+        query.message.edit_text(
+            PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
+            reply_markup=InlineKeyboardMarkup(buttons),
+            parse_mode=ParseMode.MARKDOWN,
+            timeout=60,
+            disable_web_page_preview=True,
+        )        
+        
+        
+@run_async
+def Source_about_callback(update: Update, context: CallbackContext):
+    query = update.callback_query
+    if query.data == "music2_":
+        query.message.edit_text(
+            text=f"""
+🤵 Admin Help Menu.
+
+c stands for channel playback.
+➻ /pause or /cpause » Pause the music playing.
+➻ /resume or /cresume » Resume paused music.
+➻ /mmute or /cmute » Mute playing music.
+➻ /munmute or /cunmute » Turn on muted music.
+➻ /skip or /cskip » Skip music currently playing.
+➻ /end or /cend » Stop playing music.
+➻ /shuffle or /cshuffle » Randomly shuffle playlist.
+➻ /seek or /cseek » Continue to search for music according to your duration.
+➻ /queue or /cqueue » Check queue list.
+➻ /seekback or /cseekback » Back off look for music according to your duration.
+
+⏩ Skip music playback.
+➻ /skip or /cskip » To skip the queue song.
+➻ Skips music to the specified queue number. Example: /skip 3 will skip music to third queue music and will ignore music 1 and 2 in queue.
+
+🔁 Loop.
+➻ /loop or /cloop [ enable/disable ] or [ intermediate number 1-10 ]
+➻ When activated, the bot plays the currently playing music 1-10 times on voice chat...
+
+💂 Auth users
+Auth users can use admin commands without admin rights in your group.
+➻ /auth [ Username ] » Add the user to the AUTH LIST in your group.
+➻ /unauth [ Username ] » Remove the user from the AUTH LIST in your group.
+➻ /authusers » Check the AUTH LIST in your group.
+""",
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="◁", callback_data="music2_back")]]
+            ),
+        )
+    elif query.data == "music2_back":
+        first_name = update.effective_user.first_name
+        query.message.edit_text(
+            PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
+            reply_markup=InlineKeyboardMarkup(buttons),
+            parse_mode=ParseMode.MARKDOWN,
+            timeout=60,
+            disable_web_page_preview=True,
+        )
+        
+        
     elif query.data == "fallen_music":
         query.message.edit_text(
             text="*๏ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴs ɢɪᴠᴇɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ʜᴇʟᴩ ᴀɴᴅ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴄᴏᴍᴍᴀɴᴅꜱ.*"
@@ -408,12 +510,8 @@ def Fallen_about_callback(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(
-                            text="👨‍✈️ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="source_music"
-                        ),
-                        InlineKeyboardButton(
-                            text="🤖 ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="source_music"
-                        ),
+                        InlineKeyboardButton(text="👨‍✈️ ᴀᴅᴍɪɴ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="music1_"),
+                        InlineKeyboardButton(text="🤖 ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅꜱ", callback_data="music2_"),
                     ],
                     [
                         InlineKeyboardButton(
@@ -475,58 +573,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
             timeout=60,
             disable_web_page_preview=True,
         )
-
-
-@run_async
-def Source_about_callback(update: Update, context: CallbackContext):
-    query = update.callback_query
-    if query.data == "source_music":
-        query.message.edit_text(
-            text=f"""
-🤵 Admin Help Menu.
-
-c stands for channel playback.
-➻ /pause or /cpause » Pause the music playing.
-➻ /resume or /cresume » Resume paused music.
-➻ /mmute or /cmute » Mute playing music.
-➻ /munmute or /cunmute » Turn on muted music.
-➻ /skip or /cskip » Skip music currently playing.
-➻ /end or /cend » Stop playing music.
-➻ /shuffle or /cshuffle » Randomly shuffle playlist.
-➻ /seek or /cseek » Continue to search for music according to your duration.
-➻ /queue or /cqueue » Check queue list.
-➻ /seekback or /cseekback » Back off look for music according to your duration.
-
-⏩ Skip music playback.
-➻ /skip or /cskip » To skip the queue song.
-➻ Skips music to the specified queue number. Example: /skip 3 will skip music to third queue music and will ignore music 1 and 2 in queue.
-
-🔁 Loop.
-➻ /loop or /cloop [ enable/disable ] or [ intermediate number 1-10 ]
-➻ When activated, the bot plays the currently playing music 1-10 times on voice chat...
-
-💂 Auth users
-Auth users can use admin commands without admin rights in your group.
-➻ /auth [ Username ] » Add the user to the AUTH LIST in your group.
-➻ /unauth [ Username ] » Remove the user from the AUTH LIST in your group.
-➻ /authusers » Check the AUTH LIST in your group.
-""",
-            parse_mode=ParseMode.MARKDOWN,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="◁", callback_data="fallen_music")]]
-            ),
-        )
-    elif query.data == "source_music_back":
-        first_name = update.effective_user.first_name
-        query.message.edit_text(
-            PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
-            reply_markup=InlineKeyboardMarkup(buttons),
-            parse_mode=ParseMode.MARKDOWN,
-            timeout=60,
-            disable_web_page_preview=True,
-        )
-#------------------------------------------------------------------------------------------------------------------------------        
+      
         
 @run_async
 def get_help(update: Update, context: CallbackContext):
