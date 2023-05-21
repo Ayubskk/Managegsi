@@ -483,17 +483,33 @@ def Source_about_callback(update: Update, context: CallbackContext):
     if query.data == "source_music":
         query.message.edit_text(
             text=f"""
-*ʜᴇʏ,
- ᴛʜɪs ɪs {BOT_NAME},
-ᴀɴ ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴏᴜᴩ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ & ᴍᴜꜱɪᴄ ʙᴏᴛ.*
+🤵 Admin Help Menu.
 
-ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ ᴛʜᴇ ʜᴇʟᴩ ᴏғ : [ᴛᴇʟᴇᴛʜᴏɴ](https://github.com/LonamiWebs/Telethon)
-[ᴩʏʀᴏɢʀᴀᴍ](https://github.com/pyrogram/pyrogram)
-[ᴩʏᴛʜᴏɴ-ᴛᴇʟᴇɢʀᴀᴍ-ʙᴏᴛ](https://github.com/python-telegram-bot/python-telegram-bot)
-ᴀɴᴅ ᴜsɪɴɢ [sǫʟᴀʟᴄʜᴇᴍʏ](https://www.sqlalchemy.org) ᴀɴᴅ [ᴍᴏɴɢᴏ](https://cloud.mongodb.com) ᴀs ᴅᴀᴛᴀʙᴀsᴇ.
+c stands for channel playback.
+➻ /pause or /cpause » Pause the music playing.
+➻ /resume or /cresume » Resume paused music.
+➻ /mmute or /cmute » Mute playing music.
+➻ /munmute or /cunmute » Turn on muted music.
+➻ /skip or /cskip » Skip music currently playing.
+➻ /end or /cend » Stop playing music.
+➻ /shuffle or /cshuffle » Randomly shuffle playlist.
+➻ /seek or /cseek » Continue to search for music according to your duration.
+➻ /queue or /cqueue » Check queue list.
+➻ /seekback or /cseekback » Back off look for music according to your duration.
 
-{BOT_NAME} ɪs ʟɪᴄᴇɴsᴇᴅ ᴜɴᴅᴇʀ ᴛʜᴇ ᴍɪᴛ ʟɪᴄᴇɴsᴇ.
-© 2022 - 2023 | [sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ](https://t.me/{SUPPORT_CHAT}), ᴀʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ.
+⏩ Skip music playback.
+➻ /skip or /cskip » To skip the queue song.
+➻ Skips music to the specified queue number. Example: /skip 3 will skip music to third queue music and will ignore music 1 and 2 in queue.
+
+🔁 Loop.
+➻ /loop or /cloop [ enable/disable ] or [ intermediate number 1-10 ]
+➻ When activated, the bot plays the currently playing music 1-10 times on voice chat...
+
+💂 Auth users
+Auth users can use admin commands without admin rights in your group.
+➻ /auth [ Username ] » Add the user to the AUTH LIST in your group.
+➻ /unauth [ Username ] » Remove the user from the AUTH LIST in your group.
+➻ /authusers » Check the AUTH LIST in your group.
 """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
