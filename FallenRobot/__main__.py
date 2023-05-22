@@ -198,7 +198,19 @@ def start(update: Update, context: CallbackContext):
 
             elif args[0][1:].isdigit() and "rᴜʟᴇs" in IMPORTED:
                 IMPORTED["rᴜʟᴇs"].send_rules(update, args[0], from_pm=True)
-        #111
+    
+    
+    else:
+        first_name = update.effective_user.first_name
+            update.effective_message.reply_sticker(
+                "CAACAgUAAxkBAAJYsmLWRvm70cE-mmxSNCovEf4v1ueJAAIcCAACbMK4VuL4EmZEkq8WKQQ"
+            )
+            update.effective_message.reply_text(
+                PM_START_TEXT.format(escape_markdown(first_name), BOT_NAME),
+                reply_markup=InlineKeyboardMarkup(buttons),
+                parse_mode=ParseMode.MARKDOWN,
+                timeout=60,
+            )
     else:
         update.effective_message.reply_photo(
             START_IMG,
