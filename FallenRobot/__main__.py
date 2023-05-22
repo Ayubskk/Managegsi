@@ -198,10 +198,9 @@ def start(update: Update, context: CallbackContext):
 
             elif args[0][1:].isdigit() and "rᴜʟᴇs" in IMPORTED:
                 IMPORTED["rᴜʟᴇs"].send_rules(update, args[0], from_pm=True)
-    
-    
-    else:
-        first_name = update.effective_user.first_name
+        
+        else:
+            first_name = update.effective_user.first_name
             update.effective_message.reply_sticker(
                 "CAACAgUAAxkBAAJYsmLWRvm70cE-mmxSNCovEf4v1ueJAAIcCAACbMK4VuL4EmZEkq8WKQQ"
             )
